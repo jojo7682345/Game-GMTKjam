@@ -10,6 +10,7 @@ import core.shaders.Shader;
 import core.texturing.Sprite;
 import core.utils.Constants;
 import modules.shaders.SpriteShader;
+import modules.util.Rectangle;
 
 public abstract class SpriteObject extends GameObject{
 
@@ -42,6 +43,18 @@ public abstract class SpriteObject extends GameObject{
 		Renderer renderer = new Renderer();		//creates a new rendererComponent
 		renderer.setRenderData(mesh, config,shader);
 		addComponent(Constants.RENDERER_COMPONENT, renderer);
+	}
+	
+	public Rectangle getBounds() {
+		return new Rectangle(-getHeight()/2,getHeight()/2,-getWidth()/2,getWidth()/2);
+	}
+	
+	public float getWidth() {
+		return getSprite().getWidth();
+	}
+	
+	public float getHeight() {
+		return getSprite().getWidth();
 	}
 	
 	public void setFramerate(int framerate) {
