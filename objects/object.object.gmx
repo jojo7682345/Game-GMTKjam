@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>map = mp_grid_create(0,0,room_width/TILE_SIZE,room_height/TILE_SIZE, TILE_SIZE,TILE_SIZE);
-mp_grid_add_instances(map,obj_solid,false);
-castle = noone;
-points = 0;
+            <string>depth = -y;
 </string>
           </argument>
         </arguments>

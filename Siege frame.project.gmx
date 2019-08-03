@@ -8,21 +8,38 @@
   <sprites name="sprites">
     <sprite>sprites\spr_villager</sprite>
     <sprite>sprites\spr_solid</sprite>
+    <sprite>sprites\msk_castle</sprite>
+    <sprite>sprites\spr_enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\register_pathfinder.gml</script>
+    <script>scripts\navigate.gml</script>
+    <script>scripts\scr_enter.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\game</object>
-    <object>objects\villagerSpawn</object>
     <object>objects\obj_villager</object>
+    <object>objects\creature</object>
+    <object>objects\object</object>
+    <objects name="group">
+      <object>objects\obj_castle</object>
+      <object>objects\obj_solid</object>
+      <object>objects\villagerSpawn</object>
+      <object>objects\game</object>
+    </objects>
+    <object>objects\alied</object>
+    <object>objects\enemy</object>
+    <object>objects\obj_enemy_combatand</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm0</room>
   </rooms>
-  <constants number="1">
+  <constants number="2">
     <constant name="VILLAGER_COUNT">10</constant>
+    <constant name="TILE_SIZE">16</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

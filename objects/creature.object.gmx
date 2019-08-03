@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>object</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,10 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>map = mp_grid_create(0,0,room_width/TILE_SIZE,room_height/TILE_SIZE, TILE_SIZE,TILE_SIZE);
-mp_grid_add_instances(map,obj_solid,false);
-castle = noone;
-points = 0;
+            <string>enter = scr_enter;
+kill = scr_kill;
+enterPoints=  0;
+deathPoints = 0;
+spd = 20;
 </string>
           </argument>
         </arguments>
