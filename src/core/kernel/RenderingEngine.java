@@ -6,6 +6,7 @@ import java.util.List;
 import core.configs.Default;
 import core.scene.GameObject;
 import core.scene.Layer;
+import modules.map.Map;
 
 /**
  * 
@@ -34,7 +35,7 @@ public class RenderingEngine {
 	{	
 		Camera.getInstance().update();
 		
-		Default.clearScreen();;
+		Default.clearScreen();
 		for(GameObject object : renderQueue) {
 			object.render();
 		}
@@ -44,6 +45,7 @@ public class RenderingEngine {
 	}
 	
 	public void update(){
+		Map.getInstance().update();
 		for(GameObject object: renderQueue) {
 			object.update();
 		}

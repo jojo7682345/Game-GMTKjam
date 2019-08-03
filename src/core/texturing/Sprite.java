@@ -7,7 +7,7 @@ import core.kernel.CoreEngine;
 import core.kernel.ModelLoader;
 import core.model.Mesh;
 
-public class Sprite implements Cloneable{
+public class Sprite implements Cloneable {
 
 	private Texture2D[]	textures;
 	private float		frameTime	= 0;
@@ -15,7 +15,11 @@ public class Sprite implements Cloneable{
 	private static Mesh	mesh		= ModelLoader.get("quad", 0).getMesh();
 
 	public Sprite(int frameRate, Texture2D... textures) {
-		frameTime = 1 / frameRate;
+		if (frameRate == 0) {
+			frameTime = 0;
+		} else {
+			frameTime = 1 / frameRate;
+		}
 		this.textures = textures;
 	}
 
@@ -32,7 +36,11 @@ public class Sprite implements Cloneable{
 	}
 
 	public void setFrameRate(int frameRate) {
-		frameTime = frameRate;
+		if (frameRate == 0) {
+			frameTime = 0;
+		} else {
+			frameTime = 1 / frameRate;
+		}
 	}
 
 	public void setIndex(int index) {
@@ -71,7 +79,7 @@ public class Sprite implements Cloneable{
 			try {
 				return (Sprite) loadedSprites.get(string).clone();
 			} catch (CloneNotSupportedException e) {
-				
+
 				e.printStackTrace();
 			}
 		}
@@ -86,6 +94,7 @@ public class Sprite implements Cloneable{
 	public float getWidth() {
 		return textures[0].getWidth();
 	}
+
 	public float getHeight() {
 		return textures[0].getHeight();
 	}

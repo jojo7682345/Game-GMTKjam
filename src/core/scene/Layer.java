@@ -140,8 +140,8 @@ public class Layer {
 	public void drawRectangle(int x, int y, int width, int height) {
 		x = Math.max(Math.min(x, WIDTH), 0);
 		y = Math.max(Math.min(y, HEIGHT), 0);
-		width = Math.max(Math.min(WIDTH - x, x + width), 0) - x;
-		height = Math.max(Math.min(HEIGHT - y, y + height), 0) - y;
+		width = Math.max(Math.min(WIDTH, x + width), 0) - x;
+		height = Math.max(Math.min(HEIGHT, y + height), 0) - y;
 		for (int xx = x; xx < x + width; xx++) {
 			for (int yy = y; yy < y + height; yy++) {
 				int i = yy * WIDTH + xx;
