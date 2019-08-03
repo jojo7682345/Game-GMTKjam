@@ -113,7 +113,9 @@ public class SquareGraph {
 			path.add(current.getParent());
 			current = current.getParent();
 		}
+		
 		Collections.reverse(path);
+		path.add(target);
 		return path;
 	}
 	

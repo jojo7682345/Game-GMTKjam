@@ -1,13 +1,8 @@
 package modules.components;
 
-import java.awt.Point;
-import java.util.List;
-
 import core.math.Vec2f;
-import core.math.Vec3f;
 import core.scene.Component;
-import modules.objects.Game;
-import modules.pathfinding.Node;
+import modules.map.Map;
 
 public class Pathfinding extends Component {
 
@@ -16,29 +11,16 @@ public class Pathfinding extends Component {
 	private final int	size;
 
 	public Pathfinding() {
-		this.size = 1;
+		this(0,1);
 	}
 
 	public Pathfinding(float speed, int size) {
 		this.size = size;
+		Map.getInstance().addPathfinder(this);
 	}
 
 	@Override public void update() {
-		Vec3f pos = getWorldTransform().getTranslation();
-		Game.getGraph().setStartPosition(new Point((int) (pos.getX() / Game.UNIT), (int) (pos.getY() / Game.UNIT)));
-		Game.getGraph().setTargetPosition(new Point((int) (target.getX() / Game.UNIT), (int) (target.getY() / Game.UNIT)));
-		List<Node> nodes = Game.getGraph().executeAStar();
-		if (nodes!=null&&!nodes.isEmpty()) {
-			Node node = nodes.get(0);
-
-			getWorldTransform().setTranslation(node.getX() * Game.UNIT, node.getY() * Game.UNIT, pos.getZ());
-		}
-		try {
-			Thread.sleep(1);
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
+		
 
 	}
 	

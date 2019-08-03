@@ -36,7 +36,6 @@ public class RenderingEngine {
 		Camera.getInstance().update();
 		
 		Default.clearScreen();
-		Map.getInstance().render();
 		for(GameObject object : renderQueue) {
 			object.render();
 		}
