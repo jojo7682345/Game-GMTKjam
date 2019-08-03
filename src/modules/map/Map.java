@@ -19,7 +19,7 @@ import modules.pathfinding.SquareGraph;
 public class Map {
 
 	public static final int	MAP_SIZE	= 16;
-	public static final int	TILE_SIZE	= 9;
+	public static final int	TILE_SIZE	= 8;
 
 	private SquareGraph graph = new SquareGraph(MAP_SIZE);
 
@@ -58,6 +58,9 @@ public class Map {
 		graph.setStartPosition(new Point(x,y));
 		graph.setTargetPosition(new Point(targX,targY));
 		List<Node> p = graph.executeAStar();
+		if(p==null) {
+			return new Point(x,y);
+		}
 		return p.get(Math.min(1, p.size()-1)).getPosition();
 	}
 	
@@ -114,7 +117,7 @@ public class Map {
 	public void render() {
 		layer.draw((Layer layer)->{
 			//layer.drawRectangle(x+Window.getInstance().viewPortWidth/2, Window.getInstance().viewPortHeight/2-y, 1, 1);
-			layer.drawRectangle(x+Window.getInstance().viewPortWidth/2-1, Window.getInstance().viewPortHeight/2-y-1, 2, 2);
+			layer.drawRectangle(x+Window.getInstance().viewPortWidth/2-4, Window.getInstance().viewPortHeight/2-y-4, 8, 8);
 		});
 	}
 	
