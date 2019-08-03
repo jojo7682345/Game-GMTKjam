@@ -28,9 +28,11 @@
             <string>event_inherited();
 enum state {
     ADVANCE,
+    STUNNED,
     PANIC,
     IDLE
 }
+panic_cooldown = 2;
 register_pathfinder();
 currentState = state.ADVANCE;
 </string>
@@ -55,7 +57,24 @@ currentState = state.ADVANCE;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>navigate(game.castle);
+            <string>
+if(currentState == state.ADVANCE){
+    navigate(game.castle);
+}
+image_alpha = hp/100;
+if(game.timer&lt;=0){
+    if(currentState==state.STUNNED){
+        currentState = state.PANIC;
+        show_debug_message("panic");
+    }
+    if(currentState == state.PANIC){
+        var targ = instance_create(x+random_range(-16,16),y+random_range(-16,16),target_point);
+        navigate(targ);
+        instance_destroy(targ);
+        panic_cooldown--;
+    }
+} 
+    
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,8 @@
       <object>objects\obj_solid</object>
       <object>objects\villagerSpawn</object>
       <object>objects\game</object>
+      <object>objects\camera</object>
+      <object>objects\target_point</object>
     </objects>
     <object>objects\alied</object>
     <object>objects\enemy</object>
