@@ -2,6 +2,7 @@ package modules.components;
 
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 
+import core.kernel.Camera;
 import core.kernel.Input;
 import core.kernel.Window;
 import core.math.Vec2f;
@@ -24,12 +25,13 @@ public class Interactable extends Component {
 	}
 
 	@Override public void update() {
+		Vec3f cameraPos = Camera.getInstance().getPosition().mul(2);
 		Input input = Input.getInstance();
 		if (input.isButtonreleased(GLFW_MOUSE_BUTTON_LEFT)) {
 			Vec3f pos = getWorldTransform().getTranslation().add(Window.getInstance().getWidth() / 2, Window.getInstance().getHeight() / 2, 0);
 			Vec2f mousePos = input.getCursorPosition();
-			if (mousePos.getX() >= pos.getX() + bounds.x && mousePos.getX() <= pos.getX() + bounds.y) {
-				if (mousePos.getY() >= pos.getY() + bounds.width && mousePos.getY() <= pos.getY() + bounds.height) {
+			if (mousePos.getX()+cameraPos.getX() >= pos.getX() + bounds.x && mousePos.getX()+cameraPos.getX() <= pos.getX() + bounds.y) {
+				if (mousePos.getY()+cameraPos.getY() >= pos.getY() + bounds.width && mousePos.getY()+cameraPos.getY() <= pos.getY() + bounds.height) {
 					runnable.run();
 				}
 			}
@@ -38,6 +40,7 @@ public class Interactable extends Component {
 	}
 
 	@Override public void render() {
+
 	}
 
 }

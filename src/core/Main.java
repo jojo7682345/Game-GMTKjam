@@ -4,6 +4,7 @@ import core.kernel.Game;
 import core.kernel.ModelLoader;
 import core.scene.Scene;
 import core.utils.Audio;
+import modules.map.Map;
 
 public class Main {
 
@@ -14,6 +15,7 @@ public class Main {
 		ModelLoader.load();
 		Audio.load();
 		Scene.load("mainScene", true);
+		Map.getInstance();
 		game.launch();
 	}
 

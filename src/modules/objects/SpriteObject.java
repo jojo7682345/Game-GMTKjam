@@ -46,7 +46,7 @@ public abstract class SpriteObject extends GameObject{
 	}
 	
 	public Rectangle getBounds() {
-		return new Rectangle(-getHeight()/2,getHeight()/2,-getWidth()/2,getWidth()/2);
+		return new Rectangle(-getHeight(),getHeight(),-getWidth(),getWidth());
 	}
 	
 	public float getWidth() {
