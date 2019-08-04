@@ -79,11 +79,14 @@ if(instance_number(obj_villager)==0){
     room = rm2;
     audio_stop_all();
     audio_play_sound(snd_lose,0,0);
+    var lost = room_instance_add(rm2,room_width/2,room_height/2,obj_victorious);
+    lost.image_index = 1;
 }
 if(global.time&lt;=0){
     room = rm2;
     audio_stop_all();
-    audio_play_sound(snd_win,0,true);
+    audio_play_sound(snd_win,0,false);
+    room_instance_add(rm2,room_width/2,room_height/2,obj_victorious);
 }
 timer-=delta_time/1000000;
 </string>

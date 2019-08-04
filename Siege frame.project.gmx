@@ -27,11 +27,17 @@
     <sprite>sprites\spr_enemy_knight</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\button</sprite>
-    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_wall_ver</sprite>
     <sprite>sprites\spr_shadow</sprite>
     <sprite>sprites\spr_barrel</sprite>
     <sprite>sprites\spr_skeleton</sprite>
     <sprite>sprites\victorious</sprite>
+    <sprite>sprites\spr_bush</sprite>
+    <sprite>sprites\spr_tall_grass</sprite>
+    <sprite>sprites\spr_stone</sprite>
+    <sprite>sprites\spr_catapult</sprite>
+    <sprite>sprites\spr_tower</sprite>
+    <sprite>sprites\spr_wall_hor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -46,6 +52,9 @@
     <script>scripts\move.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_tower</object>
+    <object>objects\obj_wall_hor</object>
+    <object>objects\obj_wall_ver</object>
     <objects name="game">
       <object>objects\restart</object>
       <object>objects\play</object>
@@ -64,13 +73,16 @@
       </objects>
       <object>objects\exit_btn</object>
       <objects name="group">
-        <object>objects\obj_wall</object>
         <object>objects\game</object>
         <object>objects\camera</object>
         <object>objects\target_point</object>
         <object>objects\obj_solid</object>
+        <object>objects\obj_victorious</object>
       </objects>
       <object>objects\object</object>
+      <object>objects\obj_bush</object>
+      <object>objects\obj_tall_grass</object>
+      <object>objects\obj_stone</object>
     </objects>
   </objects>
   <rooms name="rooms">
