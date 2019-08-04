@@ -54,8 +54,38 @@ if(stage==0){
         x=max(0,min(mouse_x,room_width));
         y=max(0,min(mouse_y,room_height));   
     }
-if(goal.stage!=-1||goal.targ!=id){
+if(goal == noone){
+instance_destroy();
+exit;
+}
+if(!instance_exists(goal)||(goal.stage!=-1||goal.targ!=id)){
     instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="barrel">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(stage==1&amp;&amp;other==goal){
+    instance_destroy();
+    other.stage = 0;
 }
 </string>
           </argument>
@@ -79,7 +109,7 @@ if(goal.stage!=-1||goal.targ!=id){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(stage==1){
+            <string>if(stage==1&amp;&amp;other==goal){
     instance_destroy();
     other.stage = 0;
 }
@@ -106,6 +136,30 @@ if(goal.stage!=-1||goal.targ!=id){
           <argument>
             <kind>1</kind>
             <string>stage = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>goal.stage = 0;
+instance_destroy();
 </string>
           </argument>
         </arguments>

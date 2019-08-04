@@ -29,9 +29,10 @@
 kill = scr_kill;
 enterPoints=  0;
 deathPoints = 0;
-spd = 1000;
+spd = 400;
 hp = 100;
 stage = 0;
+height = 0;
 </string>
           </argument>
         </arguments>
@@ -54,8 +55,10 @@ stage = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>draw_sprite(spr_shadow,0,x,y);
+draw_sprite(sprite_index,image_index,x,y-height);
 draw_text(x-4,y-4,string(stage));
+
 </string>
           </argument>
         </arguments>

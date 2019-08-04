@@ -5,7 +5,18 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sound>sound\Theme</sound>
+    <sound>sound\Knight_death</sound>
+    <sound>sound\snd_catapult</sound>
+    <sound>sound\villager_death</sound>
+    <sound>sound\snd_knight_crash</sound>
+    <sound>sound\menu_sound</sound>
+    <sound>sound\snd_attack</sound>
+    <sound>sound\snd_lose</sound>
+    <sound>sound\snd_win</sound>
+    <sound>sound\click</sound>
+    <sound>sound\explosion</sound>
+    <sound>sound\bomb_fuse</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_villager</sprite>
@@ -15,6 +26,9 @@
     <sprite>sprites\spr_knight</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\button</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_shadow</sprite>
+    <sprite>sprites\spr_barrel</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -40,21 +54,27 @@
       <object>objects\enemy_skeleton</object>
       <object>objects\enemy_knight</object>
       <object>objects\obj_villager</object>
+      <object>objects\barrel</object>
       <object>objects\creature</object>
       <object>objects\alied</object>
       <object>objects\enemy</object>
       <object>objects\obj_enemy_combatand</object>
+      <object>objects\catapult</object>
     </objects>
     <object>objects\obj_target</object>
-    <object>objects\obj_button</object>
+    <object>objects\play</object>
+    <object>objects\exit_btn</object>
+    <object>objects\restart</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\menu</room>
+    <room>rooms\rm2</room>
     <room>rooms\rm0</room>
   </rooms>
   <constants number="3">
     <constant name="VILLAGER_COUNT">10</constant>
     <constant name="TILE_SIZE">16</constant>
-    <constant name="ENEMY_SPAWN_CHANCE">75</constant>
+    <constant name="ENEMY_SPAWN_CHANCE">90</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

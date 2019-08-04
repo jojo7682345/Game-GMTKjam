@@ -30,8 +30,12 @@ mp_grid_add_instances(map,obj_solid,false);
 castle = noone;
 points = 0;
 timer = 1;
-audio_play_sound(sound0,0,20);
-money = 10;
+theme = audio_emitter_create();
+audio_emitter_gain(theme,0.8);
+audio_play_sound_on(theme,Theme,true,0);
+action = false;
+difficulity = 0;
+global.time = 5 * 60;
 </string>
           </argument>
         </arguments>
@@ -54,44 +58,35 @@ money = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(timer &lt;= 0){
+            <string>action = false;
+if(timer &lt;= 0){
     timer=1;
-    var num = random(100);
+    global.time--;
+    var num = random(100 + difficulity);
+    difficulity += 0.02;
     if(num &gt;= ENEMY_SPAWN_CHANCE){
         var xx = room_width-16;
-        var yy = random(room_height);
+        var yy = 16+random(room_height-32);
         instance_create(xx,yy,choose(enemy_knight, enemy_skeleton, enemy_knight));
     }
-    money++;
+    num = random(100);
+    if(num &gt;= 99){
+     var xx = 16;
+        var yy = 16+random(room_height-32);
+        instance_create(xx,yy,barrel);
+    }
+}
+if(instance_number(obj_villager)==0){
+    room = rm2;
+    audio_stop_all();
+    audio_play_sound(snd_lose,0,0);
+}
+if(global.time&lt;=0){
+    room = rm2;
+    audio_stop_all();
+    audio_play_sound(snd_win,0,true);
 }
 timer-=delta_time/1000000;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_halign(fa_middle);
-draw_set_valign(fa_middle);
-draw_set_color(c_black);
-draw_text(room_width/2,32, "$" +string(money));
-draw_set_color(c_white);
 </string>
           </argument>
         </arguments>

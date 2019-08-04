@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(game.money &gt; 50){
-var xx = 16;
-var yy = random(room_height);
-instance_create(xx,yy,knight);
-game.money -= 50;
+            <string>if(game.money &gt;= 50){ 
+    var xx = 16;
+    var yy = random(room_height);
+    instance_create(xx,yy,knight);
+    game.money -= 50;
 }
 </string>
           </argument>

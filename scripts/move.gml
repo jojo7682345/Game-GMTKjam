@@ -1,11 +1,11 @@
 #define move
 ///interact();
-if(game.money>=1){
+if(game.action==false&&stage==0){
 targ = instance_create(x,y,obj_target);
 targ.stage = 0;
 targ.goal = id;
 stage = -1;
-game.money--;
+game.action=true;
 }
 
 #define init_moveable
