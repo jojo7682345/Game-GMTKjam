@@ -39,6 +39,7 @@
     <sprite>sprites\spr_tower</sprite>
     <sprite>sprites\spr_wall_hor</sprite>
     <sprite>sprites\title_screen</sprite>
+    <sprite>sprites\spr_title_card</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -95,6 +96,7 @@
       <object>objects\exit_btn</object>
       <object>objects\info_btn</object>
       <object>objects\label</object>
+      <object>objects\slider</object>
       <object>objects\back</object>
       <objects name="group">
         <object>objects\game</object>
@@ -111,6 +113,7 @@
     </objects>
     <objects name="menu">
       <object>objects\obj_menu</object>
+      <object>objects\obj_title</object>
     </objects>
   </objects>
   <rooms name="rooms">

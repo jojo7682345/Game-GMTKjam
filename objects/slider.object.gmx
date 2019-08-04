@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="7">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room = rm3;
-audio_play_sound(click,0,0);
+            <string>text = "";
 </string>
           </argument>
         </arguments>
@@ -49,20 +48,11 @@ audio_play_sound(click,0,0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_gray);
-draw_rectangle(x-64,y-24,x+64,y+24,false);
-draw_triangle(x-128,y+24,x-64,y-24,x-64,y+24,false);
-draw_triangle(x+64,y-24,x+64+64,y-24,x+64,y+24,false);
-draw_set_color(c_dkgray);
-draw_line_width(x-64,y-24,x+128,y-24,2);
-draw_line_width(x+128,y-24,x+64,y+24,2);
-draw_line_width(x+64,y+24,x-128,y+24,2);
-draw_line_width(x-128,y+24,x-64,y-24,2);
-draw_rectangle(x-64,y-24,x+64,y+24,true);
+            <string>//draw_self();
 draw_set_color(c_white);
 draw_set_valign(fa_middle);
-draw_set_halign(fa_middle);
-draw_text(x,y,"HOW TO PLAY");
+draw_set_halign(fa_left);
+draw_line_width(x-32,y,x+32,y,2);
 </string>
           </argument>
         </arguments>

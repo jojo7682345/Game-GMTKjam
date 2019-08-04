@@ -30,6 +30,7 @@ init_moveable();
 init_battler(noone,0,0,noone);
 spd = 100;
 range = 64;
+image_speed = 0;
 </string>
           </argument>
         </arguments>

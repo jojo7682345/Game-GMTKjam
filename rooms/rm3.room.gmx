@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>976</w>
+    <w>952</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="back" x="128" y="32" name="inst_6F335776" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
-    <instance objName="pannel" x="384" y="32" name="inst_EE549ACC" locked="0" code="title = &quot;How to play&quot;&#xA;text = &#xA;&quot;The castle is under siege,&#xA;it is your job to defend it. &#xA;To defend the castle you need soldiers,&#xA;you can send soldiers into battle&#xA;by clicking on the catapult,&#xA;and cliking on the destination; &#xA;The soldier will now be shot into battle.&#xA;The enemy is trying to kill all your people!&#xA;You need to prevent that at any cost.&#xA;You can move your units&#xA;(the villagers,soldiers and barrels)&#xA;by dragging them. You can ignite barrels&#xA;to explode by tapping them.&#xA;&#xA;Good luck!&quot;&#xA;" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="pannel" x="384" y="32" name="inst_EE549ACC" locked="0" code="title = &quot;How to play&quot;&#xA;text = &#xA;&quot;The castle is under siege!&#xA;Protect the villagers!&#xA;Click and drag&#xA;to send knights into the fray,&#xA;direct villagers to safety, &#xA;and roll bombs towards the enemy.&#xA;Catapult knights into battle &#xA;by clicking on the catapult,&#xA;then clicking a destination.&#xA;Click a bomb to detonate it.&#xA;Only one screen. Only one button. &#xA;Only one frame per second.&#xA;&#xA;Only one can save the kingdom.&quot;&#xA;" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
