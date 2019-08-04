@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>976</w>
+    <w>872</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-107</xoffset>
-    <yoffset>-151</yoffset>
+    <xoffset>8</xoffset>
+    <yoffset>-55</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="background0" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -51,8 +51,10 @@
     <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="play" x="96" y="64" name="inst_D9C31744" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
-    <instance objName="exit_btn" x="96" y="160" name="inst_CD61CD7E" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="label" x="288" y="32" name="inst_B0F0044F" locked="0" code="text = &quot;press&#xA;the right mouse button&#xA;to switch playtime.&quot;;&#xA;" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="play" x="128" y="32" name="inst_022A4AAB" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="info_btn" x="128" y="96" name="inst_BCA1C500" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="exit_btn" x="128" y="160" name="inst_D86FFC56" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

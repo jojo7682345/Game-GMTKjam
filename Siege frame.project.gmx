@@ -42,6 +42,8 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\tileset</background>
+    <background>background\tileset0</background>
+    <background>background\tileset1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -50,7 +52,25 @@
     <script>scripts\scr_enter.gml</script>
     <script>scripts\battle.gml</script>
     <script>scripts\move.gml</script>
+    <scripts name="animated_tiles">
+      <script>scripts\animated_tile_add.gml</script>
+      <script>scripts\animated_tile_cleanup.gml</script>
+      <script>scripts\animated_tile_disable_all.gml</script>
+      <script>scripts\animated_tile_enable_all.gml</script>
+      <script>scripts\animated_tile_get_animation_speed.gml</script>
+      <script>scripts\animated_tile_get_background.gml</script>
+      <script>scripts\animated_tile_get_current_background.gml</script>
+      <script>scripts\animated_tile_get_current_frame.gml</script>
+      <script>scripts\animated_tile_get_frame_count.gml</script>
+      <script>scripts\animated_tile_get_next_frame.gml</script>
+      <script>scripts\animated_tile_init.gml</script>
+      <script>scripts\animated_tile_is_playing.gml</script>
+      <script>scripts\animated_tile_update.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\pixellari</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_tower</object>
     <object>objects\obj_wall_hor</object>
@@ -72,6 +92,9 @@
         <object>objects\catapult</object>
       </objects>
       <object>objects\exit_btn</object>
+      <object>objects\info_btn</object>
+      <object>objects\label</object>
+      <object>objects\back</object>
       <objects name="group">
         <object>objects\game</object>
         <object>objects\camera</object>
@@ -83,12 +106,17 @@
       <object>objects\obj_bush</object>
       <object>objects\obj_tall_grass</object>
       <object>objects\obj_stone</object>
+      <object>objects\pannel</object>
+    </objects>
+    <objects name="menu">
+      <object>objects\obj_menu</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
     <room>rooms\rm2</room>
     <room>rooms\rm0</room>
+    <room>rooms\rm3</room>
   </rooms>
   <constants number="3">
     <constant name="VILLAGER_COUNT">10</constant>

@@ -25,66 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_stop_all();
-index = audio_play_sound(menu_sound,0,true);
-startTime = 2*60;
-draw_set_font(pixellari);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="8">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-if(startTime &gt;= 20*60){
-    startTime = 2*60;
-}else{
-    startTime+=60;
-}
-audio_play_sound(click,0,0);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room = rm0;
-audio_stop_sound(index);
-global.time = startTime;
-audio_play_sound(click,0,0);
+            <string>text = "";
 </string>
           </argument>
         </arguments>
@@ -108,20 +49,10 @@ audio_play_sound(click,0,0);
           <argument>
             <kind>1</kind>
             <string>//draw_self();
-draw_set_color(c_gray);
-draw_rectangle(x-64,y-24,x+128+64+32,y+24,false);
-draw_triangle(x-128,y+24,x-64,y-24,x-64,y+24,false);
-draw_triangle(x+256+32,y-24,x+128+64+32,y-24,x+128+64+32,y+24,false);
-draw_set_color(c_dkgray);
-draw_line_width(x-64,y-24,x+256+32,y-24,2);
-draw_line_width(x+256+32,y-24,x+128+64+32,y+24,2);
-draw_line_width(x+128+64+32,y+24,x-128,y+24,2);
-draw_line_width(x-128,y+24,x-64,y-24,2);
-draw_rectangle(x-64,y-24,x+64,y+24,true);
 draw_set_color(c_white);
 draw_set_valign(fa_middle);
-draw_set_halign(fa_middle);
-draw_text(x,y,"play for " + string(startTime/60) + "min");
+draw_set_halign(fa_left);
+draw_text(x-sprite_get_width(button)*image_xscale/2,y,text);
 </string>
           </argument>
         </arguments>
