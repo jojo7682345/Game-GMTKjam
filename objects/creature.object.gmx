@@ -33,6 +33,7 @@ spd = 400;
 hp = 100;
 stage = 0;
 height = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -57,7 +58,6 @@ height = 0;
             <kind>1</kind>
             <string>draw_sprite(spr_shadow,0,x,y);
 draw_sprite(sprite_index,image_index,x,y-height);
-draw_text(x-4,y-4,string(stage));
 
 </string>
           </argument>

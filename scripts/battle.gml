@@ -34,6 +34,22 @@ if(game.timer<=0){
                 stage = 0;
                 height = 0;
                 camera.shake = 4;
+                particle1 = part_type_create();
+                part_type_shape(particle1,pt_shape_pixel);
+                part_type_size(particle1,2,2,0,0);
+                part_type_scale(particle1,1,1);
+                part_type_color1(particle1,c_gray);
+                part_type_alpha2(particle1,0.50,0);
+                part_type_speed(particle1,3,1,0,0);
+                part_type_direction(particle1,0,359,0,0);
+                part_type_gravity(particle1,0,270);
+                part_type_orientation(particle1,0,0,0,0,1);
+                part_type_blend(particle1,1);
+                part_type_life(particle1,5,5);
+                var Sname = part_system_create();
+                emitter1 = part_emitter_create(Sname);
+                part_emitter_region(Sname,emitter1,x,x,y,y,0,0);
+                part_emitter_burst(Sname,emitter1,particle1,20);
                 audio_play_sound(snd_knight_crash,0,0);
              }
         break;
@@ -45,6 +61,7 @@ if(game.timer<=0){
             navigate(targ);
         break;
         case 0:
+            height = 0;
             if(instance_exists(target)){
                     navigate(instance_nearest(x,y,target));
             }

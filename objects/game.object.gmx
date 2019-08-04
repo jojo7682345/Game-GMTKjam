@@ -35,7 +35,6 @@ audio_emitter_gain(theme,0.8);
 audio_play_sound_on(theme,Theme,true,0);
 action = false;
 difficulity = 0;
-global.time = 5 * 60;
 </string>
           </argument>
         </arguments>
@@ -87,6 +86,54 @@ if(global.time&lt;=0){
     audio_play_sound(snd_win,0,true);
 }
 timer-=delta_time/1000000;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>display_set_gui_size(room_width*2,room_height*2);
+draw_set_valign(fa_middle);
+draw_set_halign(fa_middle);
+draw_set_color(c_gray);
+draw_rectangle(0,0,128+64,32,false);
+draw_triangle(128+64,0,128+64,32,256,0,false);
+draw_set_color(c_dkgray);
+draw_rectangle(0,0,64,32,true);
+draw_line(64,32,128+64,32);
+draw_line(128+64,32,256,0);
+draw_line(64,0,256,0);
+draw_set_color(c_white);
+draw_text(32,16,"1 FPS");
+if(global.time &lt; 60){
+    draw_set_color(c_maroon);
+}
+var prefix = "";
+if(global.time%60&lt;10){
+       prefix = "0";
+       
+}
+if(global.time%60==0){
+    prefix = "00";
+}
+draw_text(128,16, string(floor(global.time/60)) + ":" + prefix +  string(global.time%60));
+
 </string>
           </argument>
         </arguments>
