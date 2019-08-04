@@ -38,6 +38,7 @@
     <sprite>sprites\spr_catapult</sprite>
     <sprite>sprites\spr_tower</sprite>
     <sprite>sprites\spr_wall_hor</sprite>
+    <sprite>sprites\title_screen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
