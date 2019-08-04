@@ -31,9 +31,11 @@
     <sprite>sprites\spr_shadow</sprite>
     <sprite>sprites\spr_barrel</sprite>
     <sprite>sprites\spr_skeleton</sprite>
+    <sprite>sprites\victorious</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\tileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -62,10 +64,11 @@
       </objects>
       <object>objects\exit_btn</object>
       <objects name="group">
-        <object>objects\obj_solid</object>
+        <object>objects\obj_wall</object>
         <object>objects\game</object>
         <object>objects\camera</object>
         <object>objects\target_point</object>
+        <object>objects\obj_solid</object>
       </objects>
       <object>objects\object</object>
     </objects>

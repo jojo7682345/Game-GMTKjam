@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1008</w>
+    <w>992</w>
     <h>600</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="exit_btn" x="96" y="160" name="inst_CD61CD7E" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
-    <instance objName="play" x="96" y="64" name="inst_8D1FD814" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="restart" x="96" y="64" name="inst_482B3802" locked="0" code="" scaleX="4.5" scaleY="4.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

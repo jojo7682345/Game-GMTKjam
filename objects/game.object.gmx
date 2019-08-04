@@ -121,16 +121,16 @@ draw_line(128+64,32,256,0);
 draw_line(64,0,256,0);
 draw_set_color(c_white);
 draw_text(32,16,"1 FPS");
-if(global.time &lt; 60){
+if(global.time &lt; 60&amp;&amp;global.time%2==0){
     draw_set_color(c_maroon);
 }
 var prefix = "";
-if(global.time%60&lt;10){
+if(global.time%60&lt;10&amp;&amp;global.time%60!=0){
        prefix = "0";
        
 }
 if(global.time%60==0){
-    prefix = "00";
+    prefix = "0";
 }
 draw_text(128,16, string(floor(global.time/60)) + ":" + prefix +  string(global.time%60));
 
