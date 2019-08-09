@@ -104,6 +104,7 @@
         <object>objects\target_point</object>
         <object>objects\obj_solid</object>
         <object>objects\obj_victorious</object>
+        <object>objects\obj_lost</object>
       </objects>
       <object>objects\object</object>
       <object>objects\obj_bush</object>

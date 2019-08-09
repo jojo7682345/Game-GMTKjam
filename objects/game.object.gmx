@@ -30,6 +30,7 @@ mp_grid_add_instances(map,obj_solid,false);
 castle = noone;
 points = 0;
 timer = 1;
+global.time_left = 0;
 theme = audio_emitter_create();
 audio_emitter_gain(theme,0.8);
 audio_play_sound_on(theme,Theme,true,0);
@@ -84,8 +85,10 @@ tileset1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action = false;
+            <string>if(instance_exists(id)){
+action = false;
 animated_tile_update();
+if(room==rm0){
 if(timer &lt;= 0){
     timer=1;
     global.time--;
@@ -107,16 +110,23 @@ if(instance_number(obj_villager)==0){
     room = rm2;
     audio_stop_all();
     audio_play_sound(snd_lose,0,0);
-    var lost = room_instance_add(rm2,room_width/2,room_height/2,obj_victorious);
-    lost.image_index = 1;
+    room_instance_add(rm2,room_width/2,room_height/2+32,obj_lost);
+    global.time_left = global.time;
+    instance_destroy();
+    exit;
 }
 if(global.time&lt;=0){
     room = rm2;
+    instance_destroy();
     audio_stop_all();
     audio_play_sound(snd_win,0,false);
     room_instance_add(rm2,room_width/2,room_height/2,obj_victorious);
+    exit;
 }
+
 timer-=delta_time/1000000;
+}
+}
 </string>
           </argument>
         </arguments>

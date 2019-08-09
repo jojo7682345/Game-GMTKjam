@@ -9,7 +9,6 @@ if(game.timer <= 0){
         var toX = (path_get_point_x(path,0)+path_get_point_x(path,1))/2;
         var toY = (path_get_point_y(path,0)+path_get_point_y(path,1))/2;
         var dir = point_direction(x,y,toX,toY);
-        show_debug_message(round(dir/45)*45);
         switch(round(dir/45)*45){
             case 0:
             image_index = 2;
